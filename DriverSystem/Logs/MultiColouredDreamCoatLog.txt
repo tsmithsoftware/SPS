@@ -1,0 +1,2 @@
+2016-03-04 12:23:30.4942|ERROR|DriverSystem.Controllers.AccountController|User john@work.com attempted login but password validation failed
+2016-03-04 14:13:01.4006|ERROR|DriverSystem.Controllers.AccountController|User john@work.com attempted login but password validation failed
