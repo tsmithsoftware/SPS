@@ -3,20 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ADO.Models;
+using ADOv2.Models;
 
 namespace ADO
 {
     public class DatabaseManager
     {
-        readonly static taxisystemContext _context = new taxisystemContext();
+        private static taxisystemContext _context;
+        public DatabaseManager(taxisystemContext context)
+        {
+            _context = context;
+        }
 
-        public static void Print()
+        public void Print()
         {
             PrintList(GetAllCustomers());
         }
 
-        private static void PrintList(List<Customer> list)
+        private void PrintList(List<Customer> list)
         {
             foreach(Customer cust in list)
             {
@@ -24,7 +28,7 @@ namespace ADO
             }
         }
 
-        private static List<Customer> GetAllCustomers()
+        public List<Customer> GetAllCustomers()
         {
             List<Customer> customerList = new List<Customer>();
             customerList = _context.Customers.ToList();

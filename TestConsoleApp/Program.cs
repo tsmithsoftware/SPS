@@ -1,4 +1,7 @@
-﻿using ADO;
+﻿using System.Collections.Generic;
+using System;
+using ADO;
+using ADOv2.Models;
 
 namespace TestConsoleApp
 {
@@ -6,7 +9,18 @@ namespace TestConsoleApp
     {
         static void Main(string[] args)
         {
-            DatabaseManager.Print();
+            /**SqlRepository<Customer> customerRepository = new SqlRepository<Customer>(
+                new ObjectContext(
+                    ConfigurationManager.ConnectionStrings["ServiceProviderContext"].ConnectionString));**/
+            DatabaseManager _manager = new DatabaseManager(new taxisystemContext());
+            List<Customer> list = _manager.GetAllCustomers();
+            foreach (Customer customer in list)
+            {
+                Console.WriteLine(customer.CustomerID);
+                Console.WriteLine(customer.CustomerName);
+                Console.WriteLine(customer.CustomerHouseNumber);
+                Console.WriteLine(customer.CustomerPostcode);
+            }
         }
     }
 }

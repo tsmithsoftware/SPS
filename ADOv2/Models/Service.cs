@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using ADOv2.Interfaces;
+using ADOv2.Models;
 
 namespace ADOv2.Models
 {
-    public partial class Service
+    public partial class Service:IEntity
     {
         public Service()
         {
@@ -15,5 +17,10 @@ namespace ADOv2.Models
         public string ServiceDescription { get; set; }
         public virtual ICollection<ServiceRequest> ServiceRequests { get; set; }
         public virtual ICollection<ServicesProvided> ServicesProvideds { get; set; }
+
+        public int Id
+        {
+            get { return ServiceId; }
+        }
     }
 }

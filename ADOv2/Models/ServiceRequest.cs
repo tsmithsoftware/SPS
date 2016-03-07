@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using ADOv2.Interfaces;
 
 namespace ADOv2.Models
 {
-    public partial class ServiceRequest
+    public partial class ServiceRequest:IEntity
     {
         public ServiceRequest()
         {
@@ -17,5 +18,10 @@ namespace ADOv2.Models
         public virtual ICollection<Bid> Bids { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual Service Service { get; set; }
+
+        public int Id
+        {
+            get { return ServiceRequestId;}
+        }
     }
 }
