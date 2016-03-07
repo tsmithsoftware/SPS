@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
 using ADO;
-using ADOv2.Models;
+using ADO.Models;
 
 namespace TestConsoleApp
 {

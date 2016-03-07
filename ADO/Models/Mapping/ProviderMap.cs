@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
-namespace ADOv2.Models.Mapping
+namespace ADO.Models.Mapping
 {
     public class ProviderMap : EntityTypeConfiguration<Provider>
     {

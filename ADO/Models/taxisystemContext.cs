@@ -1,8 +1,8 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using ADOv2.Models.Mapping;
+using ADO.Models.Mapping;
 
-namespace ADOv2.Models
+namespace ADO.Models
 {
     public partial class taxisystemContext : DbContext
     {

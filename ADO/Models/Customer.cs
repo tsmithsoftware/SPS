@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ADOv2.Models
+namespace ADO.Models
 {
     public partial class Customer
     {
